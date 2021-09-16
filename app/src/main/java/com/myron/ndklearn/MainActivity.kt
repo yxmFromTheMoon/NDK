@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+        binding.sampleText.text = signature()
     }
 
     /**
@@ -25,10 +25,14 @@ class MainActivity : AppCompatActivity() {
      */
     external fun stringFromJNI(): String
 
+    private external fun signatureParams():String
+
     companion object {
         // Used to load the 'ndklearn' library on application startup.
         init {
             System.loadLibrary("ndklearn")
         }
+
+        external fun signature():String
     }
 }

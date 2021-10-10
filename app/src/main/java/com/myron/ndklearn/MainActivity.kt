@@ -14,9 +14,11 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val list = ArrayList<Int>()
+        list.add(1)
 
         // Example of a call to a native method
-        binding.sampleText.text = signature()
+        binding.sampleText.text = stringFromJNI()
     }
 
     /**

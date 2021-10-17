@@ -118,12 +118,12 @@ ArrayList<E>::ArrayList(const ArrayList &list) {
     this->len = list.len;
     this->index = list.index;
     this->array = (E*) malloc(sizeof(E) * len);
-    memcpy(this->array,list.array,sizeof(E) * len)
+    memcpy(this->array,list.array,sizeof(E) * len);
 }
 
 template<class E>
 ArrayList<E>::ArrayList() {
-    ArrayList<E>(0);
+    ArrayList<E>(10);
 }
 
 
